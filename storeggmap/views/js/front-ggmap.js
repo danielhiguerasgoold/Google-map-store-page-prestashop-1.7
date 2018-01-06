@@ -30,7 +30,6 @@ function initMap() {
         console.log(e.latLng.lat());
         console.log(e.latLng.lng());
         map.setCenter(e.latLng);
-        // console.log(map.getCenter());
     });
     
 }
@@ -88,7 +87,3 @@ function infosHtml(store){
     storeHtml += '</div>';
     return storeHtml;
 }
-
-$(document).ready(function(){
-    initMap();
-});

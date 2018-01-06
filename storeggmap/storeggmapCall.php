@@ -36,7 +36,6 @@ if ( isset($_POST['allStores']) && $_POST['allStores']) {
 
 function reorderHours($hoursArray)
 {
-    // die($hoursArray);
     $str = str_replace('[', '', $hoursArray);
     $str = str_replace(']', '', $str);
     $str = str_replace('"', '', $str);
