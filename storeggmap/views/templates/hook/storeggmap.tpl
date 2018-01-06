@@ -25,7 +25,6 @@
 
 <section id="map-style">
 {if $apiKey}
-    <script defer src="https://maps.googleapis.com/maps/api/js?key={$apiKey}&callback=initMap"></script>
     <div id="storemap"></div>
 {else}
     <div class="alert-warning">{l s='No api key entered'}</div>
