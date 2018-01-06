@@ -227,8 +227,8 @@ class Storeggmap extends Module implements WidgetInterface
         $this->context->controller->registerStylesheet('modules-ggmap', 'modules/'.$this->name.'/views/css/ggmap.css', ['media' => 'all', 'priority' => 150]);
         $apikey = Configuration::get('STORE_GGMAP_APIKEY');
         if ('stores' == $this->context->controller->php_self && $apikey) {
-            $this->context->controller->registerJavascript('modules-initmap', 'https://maps.googleapis.com/maps/api/js?key='.$apikey.'&callback=initMap', ['server' => 'remote', 'position' => 'bottom', 'priority' => 100, 'attribute' => 'async']);
-            $this->context->controller->registerJavascript('modules-ggmap', 'modules/'.$this->name.'/views/js/front-ggmap.js', ['position' => 'bottom', 'priority' => 150]);
+            $this->context->controller->registerJavascript('modules-ggmap', 'modules/'.$this->name.'/views/js/front-ggmap.js', ['position' => 'bottom', 'priority' => 100]);
+            $this->context->controller->registerJavascript('modules-initmap', 'https://maps.googleapis.com/maps/api/js?key='.$apikey.'&callback=initMap', ['server' => 'remote', 'position' => 'bottom', 'priority' => 150, 'attribute' => 'async']);
             Media::addJsDef(array(
                 'storeGGmapCall' => _MODULE_DIR_.$this->name.'/'.$this->name.'Call.php',
                 'urlIcon' => (Configuration::get('STORE_GGMAP_ICON') ? _MODULE_DIR_.$this->name.'/views/img/'.Configuration::get('STORE_GGMAP_ICON') : null),
